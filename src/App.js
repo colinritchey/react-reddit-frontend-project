@@ -5,6 +5,7 @@ import CommentIndex from './CommentIndex.jsx'
 class App extends Component {
   constructor(props){
     super(props);
+
     this.state = { currentView: "posts" };
     this.toggleView = this.toggleView.bind(this);
   }
@@ -24,8 +25,8 @@ class App extends Component {
         <div>
           <h2>Reddit Frontend Clone</h2>
         </div>
-        <div onClick={() => this.toggleView()}>Toggle</div>
-        { componentToView }
+        <button onClick={() => this.toggleView()}>Toggle</button>
+
       </div>
     );
   }
