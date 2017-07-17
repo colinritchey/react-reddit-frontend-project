@@ -18,7 +18,9 @@ const Root = () => {
           <li className="link"><Link to="/posts" >Posts</Link></li>
           <li className="link"><Link to="/comments" >Comments</Link></li>
         </ul>
+
         <div className="content-container">
+          
           <Route path="/posts" component={PostIndex}/>
           <Route path="/comments" component={CommentIndex}/>
         </div>

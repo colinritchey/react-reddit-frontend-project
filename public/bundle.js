@@ -23620,25 +23620,38 @@ var _react2 = _interopRequireDefault(_react);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var PostItem = exports.PostItem = function PostItem(data) {
+  var thumbnail = data.thumbnail;
+  if (['default', 'image', 'self'].indexOf(thumbnail) !== -1) {
+    thumbnail = 'https://i.imgur.com/CduSn7x.jpg';
+  }
+
   return _react2.default.createElement(
-    "li",
-    { key: data.id, className: "content-item" },
+    'li',
+    { key: data.id, className: 'content-item' },
     _react2.default.createElement(
-      "p",
-      null,
-      "Title: ",
-      data.title
-    ),
-    _react2.default.createElement(
-      "p",
-      null,
-      "Score: ",
+      'p',
+      { className: 'content-score' },
       data.score
     ),
+    _react2.default.createElement('img', { src: thumbnail }),
     _react2.default.createElement(
-      "a",
-      { href: data.url },
-      "link"
+      'div',
+      { className: 'content-inner' },
+      _react2.default.createElement(
+        'a',
+        { href: data.url },
+        _react2.default.createElement(
+          'h3',
+          null,
+          data.title
+        )
+      ),
+      _react2.default.createElement(
+        'p',
+        null,
+        'submitted by ',
+        data.author
+      )
     )
   );
 };

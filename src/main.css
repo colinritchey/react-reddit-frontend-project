@@ -1,4 +1,4 @@
-body, ul, li {
+body, ul, li, a, h3, p {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -37,6 +37,9 @@ ul {
 .content-container{
   padding: 10px;
   background-color: aliceblue;
+
+  border: 1px solid lightgrey;
+  /*border-radius: 5px;*/
 }
 
 .content-item {
@@ -47,4 +50,26 @@ ul {
   margin-bottom: 2px;
 
   background-color: azure;
+
+  display: flex;
+
+}
+
+.content-item a{
+  text-decoration: none;
+}
+
+.content-item .content-score{
+  padding: 10px;
+  width: 3%;
+}
+
+.content-item img{
+  height: 50px;
+  width: 50px;
+}
+
+.content-item .content-inner{
+  width: 100%;
+  margin-left: 10px;
 }
