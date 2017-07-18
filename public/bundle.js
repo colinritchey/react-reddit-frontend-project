@@ -23676,24 +23676,33 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var CommentItem = exports.CommentItem = function CommentItem(data) {
   return _react2.default.createElement(
-    'li',
-    { key: data.id },
+    "li",
+    { key: data.id, className: "content-item" },
     _react2.default.createElement(
-      'p',
-      null,
-      'Body: ',
-      data.body
-    ),
-    _react2.default.createElement(
-      'p',
-      null,
-      'Score: ',
+      "p",
+      { className: "content-score" },
       data.score
     ),
     _react2.default.createElement(
-      'a',
-      { href: data.link_url },
-      'link'
+      "div",
+      { className: "content-inner" },
+      _react2.default.createElement(
+        "p",
+        null,
+        data.body
+      ),
+      _react2.default.createElement(
+        "p",
+        null,
+        "submitted by ",
+        data.author
+      ),
+      _react2.default.createElement("br", null),
+      _react2.default.createElement(
+        "a",
+        { href: data.link_permalink },
+        "thread"
+      )
     )
   );
 };

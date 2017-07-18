@@ -36,20 +36,16 @@ ul {
 
 .content-container{
   padding: 10px;
-  background-color: aliceblue;
 
   border: 1px solid lightgrey;
-  /*border-radius: 5px;*/
 }
 
 .content-item {
-  border: 1px solid lightgrey;
-  border-radius: 5px;
+  /*border: 1px solid lightgrey;
+  border-radius: 5px;*/
 
   padding: 10px;
   margin-bottom: 2px;
-
-  background-color: azure;
 
   display: flex;
 
