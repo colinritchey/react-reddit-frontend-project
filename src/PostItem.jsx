@@ -1,4 +1,5 @@
 import React from 'react';
+import style from "./style.css";
 
 export const PostItem = (data) => {
   let thumbnail = data.thumbnail;
@@ -7,10 +8,10 @@ export const PostItem = (data) => {
   }
 
   return(
-    <li key={data.id} className="content-item">
-      <p className="content-score">{data.score}</p>
-      <img src={thumbnail}></img>
-      <div className="content-inner">
+    <li key={data.id} className={style.content_item}>
+      <p className={style.content_score}>{data.score}</p>
+      <img className={style.content_item_img} src={thumbnail}></img>
+      <div className={style.content_inner}>
         <a href={data.url}>
           <h3>{data.title}</h3>
         </a>

@@ -12,7 +12,9 @@
     "react-router-dom": "4.1.1"
   },
   "devDependencies": {
+    "css-loader": "0.28.4",
     "react-scripts": "1.0.7",
+    "style-loader": "0.18.2",
     "webpack": "3.0.0"
   },
   "scripts": {
